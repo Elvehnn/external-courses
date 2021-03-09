@@ -1,6 +1,3 @@
-module.exports = function getTypeOfArg(s) {
-  if ((typeof s === "number" || typeof s === "string") && !isNaN(s)) {
-    return typeof s;
-  };
-  return undefined;
+module.exports = function getTypeOfArgument(value) {
+  return (typeof value === "number" || typeof value === "string") && !isNaN(value) ? typeof value : undefined;
 };

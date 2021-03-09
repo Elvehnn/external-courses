@@ -1,5 +1,6 @@
 function sameValues(arr) {
-    let newArr = arr.filter((item) => item === arr[0]);
-    return newArr.length === arr.length;
-  };
+  return arr.every((item) => item === arr[0]);
+    
+};
+
   module.exports = sameValues;
