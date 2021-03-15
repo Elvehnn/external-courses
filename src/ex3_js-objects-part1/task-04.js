@@ -1,9 +1,10 @@
 function addObjectProperty(key, obj) {
-    let newObj = obj;
+    let newObj = Object.assign(obj);
     if (!(key in newObj)) {
         newObj[key] = 'new';
     };
-    return obj;
+    return newObj;
+    
 }
     
 module.exports = addObjectProperty;
