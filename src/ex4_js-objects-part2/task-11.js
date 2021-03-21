@@ -1,17 +1,10 @@
 function countOriginSymbols(str) {
-    let arrFromString = str.split('');
-    let result = {};
-    for (let i = 0; i < arrFromString.length; i++) {
-        let key = arrFromString[i];
-        if (key in result) {
-            result[key] += 1;
-            continue;
-        };
-        result[key] = 1;
-    };
-    Object.entries(result).forEach(item => console.log(item));
-    // str.split("").reduce((r, c) => (r[c] = (r[c] || 0) + 1, r), {});
-    return;
-  };
+  let result = {};
+  str.split('').forEach(function(key){
+      result[key] = (result[key] || 0) + 1;
+      return result;
+  });
+  Object.entries(result).forEach(item => console.log(item));
+};
 
   module.exports = countOriginSymbols;
