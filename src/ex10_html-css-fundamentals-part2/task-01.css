@@ -1,0 +1,19 @@
+img {
+  width: 300px;
+  max-height: 300px;
+}
+
+.round {
+  width: 300px;
+  height: 300px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.complicated {
+  width: 300px;
+  height: 300px;
+  -webkit-mask-image: url(https://avatars.mds.yandex.net/get-pdb/2809646/426e37df-fd50-47c9-871e-1b958a7736b5/s1200?webp=false);
+  -webkit-mask-size: 300px;
+  background: url(http://kvant.space/sites/default/files/images/kosmos18.jpg)
+    no-repeat;
+}
