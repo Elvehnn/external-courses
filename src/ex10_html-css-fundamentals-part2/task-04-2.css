@@ -1,0 +1,68 @@
+@media (max-width: 1342px) {
+  .wrapper {
+    max-width: 1342px;
+    margin: 0 auto;
+    padding: 0 3%;
+  }
+  .header {
+    top: 0;
+  }
+  .header__wrapper {
+    height: 102px;
+    flex-wrap: nowrap;
+  }
+  .logo {
+    width: 150px;
+    margin-bottom: 0;
+    margin-left: 40px;
+  }
+  .contact {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .header__tablet-menu {
+    display: inline-block;
+    order: -1;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .search__field {
+    padding-right: 0;
+  }
+
+  .main {
+    margin: 102px auto 0 auto;
+    justify-content: center;
+    align-items: center;
+    background: url(assets/iback_tablet.png) no-repeat center center;
+    background-position: top center;
+  }
+  .slider {
+    height: 735px;
+  }
+  .slider__container {
+    display: none;
+  }
+  .main__title {
+    margin: 0 auto 100px auto;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 914px;
+  }
+  .about__content {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .about__text {
+    width: 782px;
+    text-align: justify;
+    margin-top: 10px;
+  }
+}

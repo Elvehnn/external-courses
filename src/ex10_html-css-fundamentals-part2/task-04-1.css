@@ -5,6 +5,7 @@
 }
 
 html,
+header,
 body,
 main {
   width: 100vw;
@@ -21,32 +22,32 @@ h4 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-h1 {
+.logo__title {
   font-size: 41px;
   color: rgb(54, 135, 196);
   font-weight: 400;
 }
-h2 {
+.h2__title {
   font-size: 58px;
   color: rgb(255, 255, 255);
   font-weight: 600;
   text-shadow: 0px 1px 8px rgba(1, 1, 1, 0.15);
   text-transform: uppercase;
 }
-h3 {
+.h3__title {
   font-size: 45px;
   color: rgb(255, 255, 255);
   font-weight: 100;
   text-shadow: 0px 1px 8px rgba(1, 1, 1, 0.15);
   letter-spacing: 0.1rem;
 }
-h4 {
+.h4__title {
   font-size: 26px;
   color: rgb(109, 110, 113);
   font-weight: bold;
 }
 .wrapper {
-  width: 1346px;
+  max-width: 60%;
   margin: 0 auto;
   padding: 0 94px;
 }
@@ -55,29 +56,26 @@ h4 {
 
 .header {
   width: 100%;
-  height: 250px;
   position: absolute;
   top: 55px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-.header__wrapper_1 {
+.header__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
   background: url(assets/logo_img.png) no-repeat;
+  height: 107px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 404px;
-  margin-bottom: 54px;
+  margin-bottom: 58px;
 }
 
 /* contact block */
-
 .contact {
   width: 225px;
   height: 37px;
@@ -125,7 +123,6 @@ span.tooltiptext {
   padding: 5px 0;
   font-size: 16px;
   font-weight: 200;
-  /* z-index: 10; */
   position: absolute;
   left: 0;
   top: 10px;
@@ -148,7 +145,6 @@ nav {
   margin-block-start: 0;
   margin-block-end: 0;
   margin: 0;
-  /* position: relative; */
 }
 .navigation__item {
   list-style: none;
@@ -181,16 +177,13 @@ nav {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid rgb(31, 170, 226);
-  /* z-index: 50; */
 }
-
 .navigation__link:hover .arrow-up {
   color: rgb(31, 170, 226);
   display: inline-block;
   bottom: -32px;
   left: 33%;
 }
-
 .navigation__divider {
   background: url(assets/nav-divide.svg) center center;
   width: 1px;
@@ -198,7 +191,6 @@ nav {
 }
 
 /* tablet-menu */
-
 .hamburger__line,
 .hamburger::after,
 .hamburger::before {
@@ -231,6 +223,7 @@ nav {
 .header__tablet-menu {
   display: none;
 }
+
 /* search */
 .search {
   display: flex;
@@ -264,7 +257,6 @@ nav {
   width: 100%;
   display: flex;
   margin: 305px auto 0 auto;
-  /* background-color: rgb(96, 92, 168); */
   background: url(assets/iback.png) no-repeat center center;
   background-position: top center;
 }
@@ -362,15 +354,15 @@ nav {
 .about {
   display: flex;
   justify-content: space-between;
-  width: 1156px;
+  margin-top: 30px;
 }
 .about__content {
-  width: 510px;
+  width: 45%;
   display: flex;
   justify-content: space-between;
 }
 .content__icon {
-  width: 95px;
+  width: 105px;
   height: 112px;
 }
 .about__icon {
@@ -382,80 +374,10 @@ nav {
 .about__text {
   width: 380px;
   text-align: justify;
+  margin-left: 35px;
 }
 .text {
   font-size: 16px;
   color: rgb(109, 110, 113);
   font-weight: 300;
-}
-
-@media (max-width: 1342px) {
-  .wrapper {
-    max-width: 1342px;
-    margin: 0 auto;
-    padding: 0 3%;
-  }
-  .header {
-    top: 0;
-  }
-  .header__wrapper {
-    height: 102px;
-    flex-wrap: nowrap;
-  }
-  .logo {
-    width: 150px;
-    margin-bottom: 0;
-    margin-left: 40px;
-  }
-  .contact {
-    display: none;
-  }
-  .menu {
-    display: none;
-  }
-  .header__tablet-menu {
-    display: inline-block;
-    order: -1;
-  }
-  .hamburger {
-    display: inline-block;
-  }
-  .search__field {
-    padding-right: 0;
-  }
-
-  .main {
-    margin: 102px auto 0 auto;
-    justify-content: center;
-    align-items: center;
-    background: url(assets/iback_tablet.png) no-repeat center center;
-    background-position: top center;
-  }
-  .slider {
-    height: 735px;
-  }
-  .slider__container {
-    display: none;
-  }
-  .main__title {
-    margin: 0 auto 100px auto;
-  }
-
-  .about {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: center;
-    width: 914px;
-    margin: 0 auto;
-  }
-  .about__content {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .about__text {
-    width: 782px;
-    text-align: justify;
-    margin-top: 10px;
-  }
 }
