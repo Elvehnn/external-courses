@@ -8,7 +8,6 @@
 html,
 body,
 main {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", "Helvetica", sans-serif;
