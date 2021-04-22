@@ -13,13 +13,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-h3 {
-  color: #545454;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 35px;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-}
 span {
   display: block;
 }
@@ -41,8 +34,8 @@ button:focus {
 }
 .pets__title {
   color: #545454;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 35px;
-  text-align: center;
   line-height: 130%;
   letter-spacing: 0.06em;
 }
@@ -58,7 +51,6 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 0 auto; */
 }
 .pet__slider__arrow {
   width: 52px;
