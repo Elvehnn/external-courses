@@ -1,0 +1,107 @@
+:root {
+  --main-color: #f1cdb3;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h3 {
+  color: #545454;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+span {
+  display: block;
+}
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #dddddd;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.pets__title {
+  color: #545454;
+  font-size: 35px;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.slider__wrapper {
+  width: 36rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+}
+.cards__container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+}
+.pet__slider__arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  text-align: center;
+}
+.pet__slider__arrow:hover {
+  background-color: #fddcc4;
+  border: none;
+}
+.arrow__right {
+  transform: rotate(180deg);
+}
+.pet__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 270px;
+  background: #fafafa;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.pet__card:hover {
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.pet__picture {
+  object-fit: cover;
+}
+.pet__card {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
