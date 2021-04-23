@@ -16,11 +16,6 @@ body {
 span {
   display: block;
 }
-button,
-button:active,
-button:focus {
-  outline: none;
-}
 
 .pets {
   display: flex;
@@ -58,10 +53,13 @@ button:focus {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   text-align: center;
+  outline: none;
 }
-.pet__slider__arrow:hover {
+.pet__slider__arrow:hover,
+.pet__slider__arrow:focus {
   background-color: #fddcc4;
   border: none;
+  cursor: pointer;
 }
 .arrow__right {
   transform: rotate(180deg);
