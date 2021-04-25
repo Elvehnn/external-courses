@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="kanban.css">
+</head>
+<html>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo__icon"></div>
+                    <h1 class="logo__title">Awesome Kanban Board</h1>
+                </div>
+                <div class ="user">
+                    <button class="add__list">
+                       <div class="add__icon"></div>
+                       <p class="add__title">Create new list</p>
+                    </button>
+                    <div class="user__menu">
+                        <div class="user__avatar"></div>
+                        <div class="menu__arrow"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </header>
+        <main class="main">
+            <div class="scroll">  </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="tasks">
+                    <div class="tasks__status">Active tasks: &lt;N&gt;</div>
+                    <div class="tasks__status">Finished tasks: &lt;M&gt;</div>
+                </div>
+                <div class="owner">Kanban board by &lt;NAME&gt;, &lt;YEAR&gt;</div>
+            </div>
+
+        </footer>
+    
+    
+    </body>
+    <script src="kanban.js"></script>
+</html>
