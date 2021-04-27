@@ -73,12 +73,12 @@ body {
 }
 .pet__picture {
   object-fit: cover;
-  animation-name: fade;
-  animation-duration: 1s;
+  animation: fade 1s linear;
+  /* animation-delay: 0.2s; */
 }
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   to {
     opacity: 1;

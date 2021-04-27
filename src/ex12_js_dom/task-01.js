@@ -29,25 +29,25 @@ const petsList = [
 document.querySelector(".arrow__left").addEventListener("click", () => {
       if (slideIndex > 1) {
         slideIndex -= 1;
-        showSlides(petsList[slideIndex - 1]);
+        changeSlides(petsList[slideIndex - 1]);
       } else {
         slideIndex = petsList.length;
-        showSlides(petsList[slideIndex - 1]);
+        changeSlides(petsList[slideIndex - 1]);
       }
     });
 
 document.querySelector(".arrow__right").addEventListener("click", () => {
       if (slideIndex < petsList.length) {
         slideIndex += 1;
-        showSlides(petsList[slideIndex - 1]);
+        changeSlides(petsList[slideIndex - 1]);
       } else {
         slideIndex = 1;
-        showSlides(petsList[slideIndex - 1]);
+        changeSlides(petsList[slideIndex - 1]);
       }
     });
 
-showSlides = (pet) => {
-    let div = document.querySelector(".pet__card");
-    div.innerHTML = '';
-    div.innerHTML = `<img class="pet__picture" src="${pet.img}" alt="${pet.name}"/>`;  
+let image = document.querySelector(".pet__picture");
+changeSlides = (pet) => {
+    image.src = pet.img;
+    image.alt = pet.name;
 }
