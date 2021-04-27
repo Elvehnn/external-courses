@@ -1,7 +1,3 @@
-:root {
-  --main-color: #f1cdb3;
-  font-size: 16px;
-}
 * {
   box-sizing: border-box;
 }
@@ -13,10 +9,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-span {
-  display: block;
-}
-
 .pets {
   display: flex;
   flex-direction: column;
@@ -31,11 +23,10 @@ span {
   color: #545454;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 35px;
-  line-height: 130%;
   letter-spacing: 0.06em;
 }
 .slider__wrapper {
-  width: 36rem;
+  width: 580px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,8 +73,6 @@ span {
 }
 .pet__picture {
   object-fit: cover;
-}
-.pet__card {
   animation-name: fade;
   animation-duration: 1s;
 }
