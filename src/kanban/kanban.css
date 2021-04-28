@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  color: #fff;
+}
+.header {
+  width: 100%;
+  position: absolute;
+  height: 55px;
+  left: 0px;
+  top: 0px;
+  background: #0067a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
+}
+.logo__icon {
+  background: url("assets/logo.svg") no-repeat center;
+  width: 45px;
+  height: 45px;
+}
+h1.logo__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  margin-left: 8px;
+}
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+}
+.add__list {
+  outline: none;
+  border: 0;
+  width: 181px;
+  height: 33px;
+  background: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.add__icon {
+  background: url(assets/add-list.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  margin: auto 8px;
+}
+.add__icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.add__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.user__menu {
+  display: flex;
+  align-items: center;
+}
+.user__avatar {
+  width: 40px;
+  height: 40px;
+  background: url(assets/user-avatar.svg) no-repeat center;
+}
+.menu__arrow {
+  width: 24px;
+  height: 24px;
+  background: url(assets/arrow-down.svg) no-repeat center;
+}
+.menu__arrow:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.main {
+  background: #0079bf;
+  height: 100vh;
+}
+.scroll {
+  background: white;
+  height: 10px;
+}
+.footer {
+  background: #0067a3;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tasks {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.tasks__status {
+  margin: 0 18px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+.owner {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 24px;
+}
