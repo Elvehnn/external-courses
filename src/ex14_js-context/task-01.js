@@ -1,38 +1,45 @@
-const calculator = Calculator();
-
-const Calculator = () => {
-  let result = 0;
+const calculator = new Calculator;
+const Calculator = {
+  result: 0,
   
-  const getResult = () => {        
-    return result;
-  };
+  getResult() {
+    return this.result;
+  },
 
-  const reset = () => {
-    result = 0;
-    return result;
-  };
+  reset() {
+    this.result = 0;
+    return this;
+  },
     
-  const add = (value) => {        
-    result += value;
-    return add;
-  };
+  add(value) {        
+    this.result += value;
+    return this;
+  },
 
-  const subtract = (value) => {        
-    result -= value;
-    return subtract;
-  };
+  multiply(value) {        
+    this.result *= value;
+    return this;
+  },
 
-  const divide = (value) => {        
-    result /= value;
-    return divide;
-  };
+  subtract(value) {        
+    this.result -= value;
+    return this;
+  },
 
-  const multiply = (value) => {        
-    result *= value;
-    return multiply;
-  };
-  
-  return { add, getResult, reset };
+  divide(value) {        
+    this.result /= value;
+    return this;
+  },
+
+  setState(value) {
+    this.result = value;
+    return this;
+  },
+
+  fetchData(callback) {
+      this.result = callback(500);
+      return this;
+  },
  }
 
-module.exports = calculator;
+ module.exports = calculator;
