@@ -18,10 +18,9 @@ Hangman.prototype = {
       this.wrongSymbols.push(letter);
       this.errorsLeft--;
       if (this.errorsLeft < 0) {
-        console.log('You lost!');
+        console.log('Sorry, you lost!');
         return this.guess;
       }
-      // console.log(`${this.guessedString.join('')} | errors left ${this.errorsLeft} | ${this.wrongSymbols.join(' ,')}`);
         console.log(`${this.getStatus()} | ${this.wrongSymbols.join(', ')}`);
         return this.guess;
     }
@@ -29,11 +28,11 @@ Hangman.prototype = {
     while (index !== -1) {
       this.guessedString[index] = this.arrayFromWord[index];
       index = this.arrayFromWord.indexOf(letter, index + 1);
-      console.log(this.guessedString.join(''));
+      // console.log(this.guessedString.join(''));
     } 
     
     if (this.guessedString.join('') === this.arrayFromWord.join('')) {
-       console.log(`${this.guessedString.join('')} | You won!`);
+       console.log(`${this.guessedString.join('')} | Cool! You won!`);
     };
 
     return this;
@@ -52,7 +51,6 @@ Hangman.prototype = {
   },
 
   getStatus: function() { 
-    // console.log(`${this.guessedString} | errors left ${this.errorsLeft}`);
     return (`${this.guessedString} | errors left ${this.errorsLeft}`);
   },
 

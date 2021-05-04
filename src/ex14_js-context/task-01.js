@@ -1,4 +1,3 @@
-const calculator = new Calculator;
 const Calculator = {
   result: 0,
   
@@ -40,6 +39,8 @@ const Calculator = {
       this.result = callback(500);
       return this;
   },
- }
+ };
+ 
+ const calculator = new Calculator;
 
  module.exports = calculator;
