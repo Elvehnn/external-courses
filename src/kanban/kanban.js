@@ -168,5 +168,5 @@ function checkEmptyLists() {
              addButtons[index + 1].disabled = true;
         }
     });
-}ж
+};
 
