@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="kanban.css">
 </head>
 <html>
-    <body>
+    <body class='kanban-body'>
         <header class="header">
-            <div class="container">
+            <div class="header-container">
                 <div class="logo">
                     <div class="logo__icon"></div>
                     <h1 class="logo__title">Awesome Kanban Board</h1>
@@ -29,7 +29,64 @@
             </div>
       </header>
         <main class="main">
-            <div class="scroll">  </div>
+            <div class='main-wrapper'>
+                <div class="container">
+
+                    <article class='board' data-board-id='0'>
+                        <div class="board__header">
+                            <h2 class="board__title">Backlog</h2>
+                            <div class="popup__button">
+                                <div class="popup__button_dot"></div>
+                            </div>
+                        </div>
+                        <ul class="task-list" data-task-list-id='0'>
+                            <li class="list__item" id = '0'>
+                                Clean home
+                        </li>
+                        </ul>
+                        <button class="add-task-button">+ Add card</button>
+                    </article>
+
+                    <article class="board" data-board-id='1'>
+                        <div class="board__header">
+                            <h2 class="board__title">Ready</h2>
+                            <div class="popup__button">
+                                <div class="popup__button_dot"></div>
+                            </div>
+                        </div>
+                        <ul class="task-list" data-task-list-id='1' id='ready-list'>
+                        </ul>
+                        <button class='add-task-button'>+ Add card</button>
+                    </article>
+
+                    <article class="board" data-board-id='2'>
+                        <div class="board__header">
+                            <h2 class="board__title">In Progress</h2>
+                            <div class="popup__button">
+                                <div class="popup__button_dot"></div>
+                            </div>
+                        </div>
+                        <ul class="task-list" data-task-list-id='2' id='in-progress-list'>
+                        </ul>
+                        <button class='add-task-button' disabled>+ Add card</button>
+                    </article>
+
+                    <article class="board" data-board-id='3'>
+                        <div class="board__header">
+                            <h2 class="board__title">Finished</h2>
+                            <div class="popup__button">
+                                <div class="popup__button_dot"></div>
+                            </div>
+                        </div>
+                        <ul class="task-list" data-task-list-id='3' id='in-progress-list'>
+                        </ul>
+                        <button class='add-task-button' disabled>+ Add card</button>
+                    </article>
+
+                </div>
+                <div class="scroll">  </div>
+            </div>
+            
         </main>
         <footer class="footer">
             <div class="container">
