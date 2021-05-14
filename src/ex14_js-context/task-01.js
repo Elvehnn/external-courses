@@ -43,5 +43,4 @@ const Calculator = {
 };
  
 const calculator = new Calculator;
-
 module.exports = calculator;
