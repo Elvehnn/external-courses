@@ -59,11 +59,4 @@ class Hangman {
 };
 
 const hangman = new Hangman();
-
 module.exports = hangman;
-
-
-
-
-
-
