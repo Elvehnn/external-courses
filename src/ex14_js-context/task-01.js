@@ -39,6 +39,7 @@ const Calculator = {
       this.result = callback(500);
       return this;
   },
+  
 };
 
 const calculator = new Calculator;
