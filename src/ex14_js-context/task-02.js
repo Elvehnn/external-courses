@@ -56,6 +56,7 @@ class Hangman {
     startAgain(newWord) { 
       return new Hangman(newWord);
     }
+    
 };
 
 const hangman = new Hangman();
