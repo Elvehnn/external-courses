@@ -22,7 +22,7 @@ userMenu.addEventListener("click", () => {
     }
 });
 
-// TASK-BOARDS
+// ПЕРЕМЕННЫЕ
 const tasks = [
     { id: 0, name: 'Clean home', boardId: 0 },
 ];
@@ -48,7 +48,10 @@ const boards = [
 const boardsContainer = document.querySelector('.container');
 const addButtons = document.querySelectorAll('.add-task-button');
 let boardId;
+const taskInput = createInputForm();
+taskInput.onblur = addNewTask;
 
+// СОЗДАНИЕ ЭЛЕМЕНТА ДЛЯ ВВОДА НОВОЙ ЗАДАЧИ - INPUT
 function createInputForm() {
     let input = document.createElement('input');
     input.type = 'text';
@@ -59,6 +62,7 @@ function createInputForm() {
     return input;
 };
 
+// СОЗДАНИЕ ЭЛЕМЕНТА СПИСКА С СОДЕРЖАНИЕМ ИЗ INPUT
 function createListItem(index, task) {
     let listItem = document.createElement('li');
     listItem.className = 'list__item';
@@ -67,6 +71,7 @@ function createListItem(index, task) {
     return listItem;
 };
 
+// ДОБАВЛЕНИЕ НОВОЙ ЗАДАЧИ В ПЕРВЫЙ СПИСОК ИЗ INPUT
 function addNewTask() {
     if (taskInput.value) {
         tasks.push({ id: tasks.length, name: taskInput.value, boardId: taskInput.boardId });
@@ -87,11 +92,7 @@ function saveToLocalStorage() {
     // console.log(localStorage.getItem('todo'));
 };
 
-const taskInput = createInputForm();
-taskInput.onblur = addNewTask;
-
-// ДОБАВЛЕНИЕ ЗАДАЧ
-
+// ДОБАВЛЕНИЕ ЗАДАЧ ПО КЛИКУ НА КНОПКУ "ADD"
 boardsContainer.onclick = function(event) {
     let target = event.target; 
     if (target.className !== 'add-task-button') return;
@@ -129,6 +130,7 @@ function createAddTaskMenu() {
     
     return boardListItem;
 };
+
 // кнопка "добавить" в выпадающем списке из задач предыдущей доски
 function createSubmitButton() {
     submitButton = document.createElement('button');
@@ -138,7 +140,7 @@ function createSubmitButton() {
     return submitButton;
 };
 
-// перемещение задачи
+// перемещение задачи из одного списка в другой
 function moveTasks() {
     let checkbox = document.querySelectorAll('.checkbox');
     let listToAdd = document.querySelector(`ul[data-task-list-id="${boardId}"]`);
@@ -157,6 +159,7 @@ function moveTasks() {
     checkEmptyLists();
 };
 
+//проверка на пустой список
 function checkEmptyLists() {
     boards.forEach((element, index) => {
         let filtered = tasks.filter(item => item.boardId === index);
