@@ -39,8 +39,9 @@ const Calculator = {
       this.result = callback(500);
       return this;
   },
- };
+  
+};
  
- const calculator = new Calculator;
+const calculator = new Calculator;
 
- module.exports = calculator;
+module.exports = calculator;
