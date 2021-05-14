@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form example</title>
+    <link rel="stylesheet" href="task-02.css">
+</head>
+<body>
+    <form action="http://httpbin.org/post" enctype="multipart/form-data" method="post">
+        <fieldset>
+          <legend>Personal data</legend>
+          <p><label for="surname">Surname</label><input type="text" id="surname"></p>
+          <p><label for="name">First name</label><input type="text" id="name"></p>
+          <p><label for="middle">Middle name</label><input type="text" id="middle"></p>
+          <p><label>You are</label>
+            <input type="radio" name="sex" value="male">male 
+            <input type="radio" name="sex" value="female">female
+          </p>
+          <p><label for="age">Age</label><input type="number" id="age" min="18" max="101"></p>
+          <label>
+            Country of residence
+            <select name="country">
+              <option value="1">Russian Federation</option>
+              <option value="2">Finland</option>
+              <option value="3">Denmark</option>
+            </select>
+          </label>
+          <p><label>City</label>
+            <input type="checkbox" name="city" value="ryazan">Ryazan 
+            <input type="checkbox" name="city" value="moscow">Moscow 
+          </p>
+          <p><label for="photo">Photo</label><input type="file" id="photo"></p>
+          <hr class="line">
+
+          <label>
+            Title
+            <select name="job" size="8" multiple>
+                <optgroup label="Technologies">
+                    <option value="1">WebMaster</option>
+                    <option value="2">Database Administrator</option>
+                    <option value="3">Computer-aided design</option>
+                </optgroup>
+                <optgroup label="Finance">
+                    <option value="1">Economic planning</option>
+                    <option value="2">Management accounting</option>
+                    <option value="3">Budgeting and planning</option>
+                </optgroup>
+            </select>
+          </label>
+          <p><label for="salary">Salary</label><input type="range" id="salary"></p>
+          <textarea placeholder="Tell us about yourself" cols="50" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <p><label for="site">Site</label><input type="text" id="site"></p>
+            <p><label for="email">E-mail</label><input type="email" id="email"></p>
+            <p><label for="phone">Phone</label><input type="text" id="phone"></p>
+        </fieldset>
+        <p><label for="password">Password</label><input type="password" id="password" required></p>  
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить">
+      </form>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #dddddd;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.pets__title {
+  color: #545454;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+}
+.slider__wrapper {
+  width: 580px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+}
+.cards__container {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pet__slider__arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  text-align: center;
+  outline: none;
+}
+.pet__slider__arrow:hover,
+.pet__slider__arrow:focus {
+  background-color: #fddcc4;
+  border: none;
+  cursor: pointer;
+}
+.arrow__right {
+  transform: rotate(180deg);
+}
+.pet__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 270px;
+  background: #fafafa;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.pet__card:hover {
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.pet__picture {
+  object-fit: cover;
+  animation: fade 1s linear;
+  /* animation-delay: 0.2s; */
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
