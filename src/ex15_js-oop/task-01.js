@@ -27,25 +27,25 @@ function Lollipop(name, weight, topping) {
 Lollipop.prototype = Candy.prototype;
 
 const gift = [];
-gift.push(new Chocolate('Belochka', 30, 'nuts'));
-gift.push(new Chocolate('Red Riding Hood', 20, 'waffle'));
-gift.push(new Chocolate('Bear in the north', 20, 'waffle'));
-gift.push(new Lollipop('Golden key', 5, 'melted sugar'));
+gift.push(new Chocolate('Белочка', 30, 'nuts'));
+gift.push(new Chocolate('Красная шапочка', 20, 'waffle'));
+gift.push(new Chocolate('Мишка на севере', 20, 'waffle'));
+gift.push(new Lollipop('Дюшес', 15, 'melted sugar'));
 
 
 let totalWeight = gift.reduce((sum, item) => sum + item.weight, 0);
-// console.log(`Общий вес подарка: ${totalWeight} г`);
+console.log(`Общий вес подарка: ${totalWeight} г`);
 
 let sortedGift = (param) => {
-  if (typeof(param) === 'string') {
-    return gift.sort(function (a, b) {
-      return a[param] < b[param];
-    });
-  }
+  return gift.sort((a, b) => a[param] > b[param] ? 1 : -1);
 };
-console.log(sortedGift(name));
+console.log('Сортировка по весу:')
+sortedGift('weight').forEach((item) =>{
+  console.log(`${item.name}, ${item.weight} г`)
+});
 
 let findCandy = (string) => {
   return gift.find(item => item.name === string);
 };
-// console.log(findCandy('Golden key'));
+console.log('Найти конфету по названию: "Дюшес"');
+console.log(findCandy('Дюшес'));
