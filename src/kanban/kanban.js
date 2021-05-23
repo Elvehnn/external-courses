@@ -9,15 +9,15 @@ let dropDownTemplate = `
 `;
 
 let dropDownMenu = document.createElement('ul');
-dropDownMenu.className = "drop-down";
+dropDownMenu.className = 'drop-down';
 dropDownMenu.innerHTML = dropDownTemplate;
 
-userMenu.addEventListener("click", () => {
+userMenu.addEventListener('click', () => {
     if (menuArrow.classList.contains('menu__arrow_shown')) {
         dropDownMenu.remove();
-        menuArrow.classList.toggle('menu__arrow_shown');
+        menuArrow.classList.remove('menu__arrow_shown');
     } else {
-        menuArrow.classList.toggle('menu__arrow_shown');
+        menuArrow.classList.add('menu__arrow_shown');
         userMenu.appendChild(dropDownMenu);
     }
 });
@@ -79,14 +79,14 @@ function createListItem(index, task) {
 
 // выпадающий список из задач предыдущей доски
 function createAddTaskMenu() {
-    let boardListItem= document.createElement('li');
+    let boardListItem = document.createElement('li');
     let addTaskMenu = document.createElement('ul');
-        addTaskMenu.className = "add-task-dropdown";
+    addTaskMenu.className = 'add-task-dropdown';
     let addTaskMenuItems = `<li class="add-task-dropdown__item">
     Выберите задачу из списка</li>`;
     
     boards[boardId - 1].tasks.forEach(item => {
-        addTaskMenuItems +=`<li class="add-task-dropdown__item">${item.name}
+        addTaskMenuItems += `<li class="add-task-dropdown__item">${item.name}
         <input class="checkbox" type="checkbox"></li>`;
     });
     addTaskMenu.innerHTML = addTaskMenuItems;
@@ -103,7 +103,7 @@ function createSubmitButton() {
     submitButton = document.createElement('button');
     submitButton.className = 'submit';
     submitButton.innerHTML= 'Add';
-    submitButton.onclick = moveTasks;
+    submitButton.addEventListener('click', moveTasks);
     return submitButton;
 };
 
@@ -115,7 +115,7 @@ function addNewTask() {
             name: taskInput.value 
         });
         let item = createListItem(boards[boardId].tasks.length - 1, taskInput.value);
-        document.querySelector(`ul[data-task-list-id="${taskInput.boardId}"]`).appendChild(item);
+        document.querySelector(`ul[data-task-list-id='${taskInput.boardId}']`).appendChild(item);
         taskInput.value = '';
     }
     taskInput.remove();
@@ -123,7 +123,7 @@ function addNewTask() {
 };
 
 // КЛИК ПО КНОПКЕ "ADD"
-boardsContainer.onclick = function(event) {
+boardsContainer.addEventListener('click', (event) => {
     let target = event.target; 
     if (target.className !== 'add-task-button') return;
     boardId = +target.parentNode.getAttribute('data-board-id');
@@ -134,15 +134,15 @@ boardsContainer.onclick = function(event) {
         
     } else {                                                                // создать input для добавления задачи на первую доску
         taskInput.boardId = boardId;
-        document.querySelector(`ul[data-task-list-id="${boardId}"]`).appendChild(taskInput);
+        document.querySelector(`ul[data-task-list-id='${boardId}']`).appendChild(taskInput);
         taskInput.focus();
     }
-};
+});
 
 // ПЕРЕМЕЩЕНИЕ ЗАДАЧ
 function moveTasks() {
     let checkbox = document.querySelectorAll('.checkbox');
-    let listToAdd = document.querySelector(`ul[data-task-list-id="${boardId}"]`);
+    let listToAdd = document.querySelector(`ul[data-task-list-id='${boardId}']`);
     checkbox.forEach(element => {
         if (element.checked) {
             let taskToMove = boards[boardId - 1].tasks.find(item => 
