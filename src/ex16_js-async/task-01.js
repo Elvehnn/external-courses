@@ -1,27 +1,38 @@
-function fetchFunc() {
-    let xhr = new XMLHttpRequest();
+const requestURL = 'https://jsonplaceholder.typicode.com/users';
 
-    xhr.open('GET', '/article/xmlhttprequest/example/load');
-    xhr.send();
+function myRequest(method, url, body = null) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest()
 
-    xhr.onload = function() {
-    if (xhr.status != 200) { 
-        alert(`Ошибка ${xhr.status}: ${xhr.statusText}`); 
-    } else { 
-        alert(`Готово, получили ${xhr.response.length} байт`); 
+    xhr.open(method, url)
+    xhr.responseType = 'json'
+    xhr.setRequestHeader('Content-Type', 'application/json')
+
+    xhr.onload = () => {
+      if (xhr.status >= 400) {
+        reject(xhr.response)
+      } else {
+        resolve(xhr.response)
+      }
     }
-    };
 
-    xhr.onprogress = function(event) {
-    if (event.lengthComputable) {
-        alert(`Получено ${event.loaded} из ${event.total} байт`);
-    } else {
-        alert(`Получено ${event.loaded} байт`); 
+    xhr.onerror = () => {
+      reject(xhr.response)
     }
-    };
 
-    xhr.onerror = function() {
-    alert("Запрос не удался");
-    };
+    xhr.send(JSON.stringify(body))
+  })
 }
 
+myRequest('GET', requestURL)
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+
+const body = {
+  name: 'Elena Shashina',
+  age: 40
+};
+
+myRequest('POST', requestURL, body)
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
