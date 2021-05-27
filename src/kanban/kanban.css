@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 html,
@@ -17,7 +17,7 @@ main {
 .header {
   width: 100%;
   position: absolute;
-  height: 55px;
+  height: 75px;
   left: 0px;
   top: 0px;
   background: #0067a3;
@@ -25,7 +25,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.container {
+.header-container {
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -133,14 +133,199 @@ h1.logo__title {
   background-color: #5596bb;
 }
 
+/* MAIN */
+
 .main {
-  background: #0079bf;
   height: 100vh;
+  margin-top: 75px;
+  background: rgb(0, 121, 191);
+  padding: 25px;
 }
-.scroll {
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.board {
+  width: 282px;
+  background: rgb(235, 236, 240);
+  border-radius: 10px;
+  padding: 14px;
+  margin-right: 24px;
+}
+.board__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2.board__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+}
+.popup__button_dot {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  background: rgb(0, 0, 0);
+  border-radius: 100px;
+  margin: auto 6px;
+}
+.popup__button_dot::before,
+.popup__button_dot::after {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background: rgb(0, 0, 0);
+  border-radius: 100px;
+  position: absolute;
+}
+.popup__button_dot::before {
+  left: -6px;
+}
+.popup__button_dot::after {
+  left: 6px;
+}
+/* .popup__button_dot::before:hover,
+.popup__button_dot::after:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+} */
+.popup__button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.list__item {
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 7px 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  border: none;
+}
+.task-input {
+  width: 100%;
+  min-height: 35px;
+  background: #ffffff;
+  border-radius: 5px 0 0 5px;
+  padding: 7px 8px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgb(92, 92, 92);
+  border: solid 2px #58aaf7;
+  outline: none;
+}
+.task-input:active {
+  border: solid 2px #58aaf7;
+}
+/* .submit-button {
+  min-height: 35px;
+  background: #58aaf7;
+  border: solid 2px #58aaf7;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  color: #ffffff;
+}
+.submit-button:hover {
+  cursor: pointer;
+} */
+.add-task-button {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  line-height: 21px;
+  color: #5e6c84;
+  margin-top: 15px;
+  border: none;
+  display: block;
+}
+.add-task-button-hidden {
+  display: none;
+}
+.add-task-button:hover {
+  cursor: pointer;
+  color: rgb(0, 121, 191);
+}
+.add-task-button[disabled] {
+  cursor: default;
+  color: rgb(128, 128, 128);
+}
+/* ADD TASK DROPDOWN*/
+.add-task-dropdown {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.add-task-dropdown__item {
+  min-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  color: #0067a3;
+  border: 2px solid rgb(235, 236, 240);
+}
+.add-task-dropdown__item:first-child {
+  font-size: 15px;
+  background: url(assets/arrow-down.svg) no-repeat right rgb(235, 236, 240);
+  color: #5e6c84;
+}
+.add-task-dropdown__item:first-child:hover {
+  cursor: default;
+  color: #5e6c84;
+  background-color: rgb(235, 236, 240);
+}
+.add-task-dropdown__item:hover {
+  color: #5e6c84;
+}
+.add-task-dropdown__item:hover,
+.add-task-dropdown__item:focus {
+  cursor: pointer;
+  background-color: #d4e6f0;
+}
+.checkbox {
+  margin-right: 15px;
+}
+
+.submit {
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0067a3;
+  color: #fff;
+  margin-top: 10px;
+}
+.submit:hover,
+.submit:focus {
+  cursor: pointer;
+  background-color: #5596bb;
+}
+
+/* .scroll {
   background: white;
   height: 10px;
-}
+} */
+
+/* FOOTER */
+
 .footer {
   background: #0067a3;
   height: 55px;
