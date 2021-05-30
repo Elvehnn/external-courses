@@ -2,11 +2,11 @@
 
 ## Description
 
-- main directory is src
-- entry files are index.js and index.html
-- "assets"-directory contains image files 
-- "components"-directory contains modules and components with its own css-files 
-- "styles"-directory contains rest supporting styles 
+- main directory is `src`
+- entry files are `index.js` and `index.html`
+- `"assets"`-directory contains image files 
+- `"components"`-directory contains modules and components with its own css-files 
+- `"styles"`-directory contains rest supporting styles 
 
 ## Features
 
