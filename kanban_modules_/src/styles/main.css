@@ -127,13 +127,6 @@ h1.logo__title {
 	justify-content: flex-start;
 	align-items: flex-start;
 }
-.board {
-	width: 282px;
-	background: rgb(235, 236, 240);
-	border-radius: 10px;
-	padding: 14px;
-	margin-right: 24px;
-}
 .board__header {
 	display: flex;
 	justify-content: space-between;

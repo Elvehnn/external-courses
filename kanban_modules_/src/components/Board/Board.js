@@ -1,4 +1,5 @@
 import HtmlElement from '../HtmlElement/HtmlElement';
+import css from './Board.module.css';
 import { renderBoards } from '../renderBoards.js';
 import {
 	saveToLocalStorage as save,
@@ -16,7 +17,7 @@ export class Board {
 		this.name = name;
 		this.data = load();
 		this.element = new HtmlElement({
-			className: 'board',
+			className: css.board,
 			html: `
                 <div class="board__header">
                     <h2 class="board__title">${this.name}</h2>
